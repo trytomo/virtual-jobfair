@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dicoding:email" content="adi_ibnsahr13@outlook.com">
+    <title>Realtime 3D Virtual Jobfair</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/virtual-jobfair.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content" style="display: table; overflow: hidden">
+      <div id="unityContainer"></div>
+    </div>
+
+    <script>
+      var myWidth = innerWidth;
+      var myHeight = innerHeight;
+      document.getElementById("unityContainer").style.width = myWidth + "px";
+      document.getElementById("unityContainer").style.height = myHeight + "px";
+    </script>
+  </body>
+</html>
